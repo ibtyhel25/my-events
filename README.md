@@ -40,7 +40,7 @@ This is a Flutter app for booking and managing events. Users can view events, bo
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your-repo/event-booking-flutter.git
+   git clone https://github.com/ibtyhel25/my-events.git
    ```
 2. Ensure that you have Flutter and Firebase set up in your project.
 4. Install necessary dependencies by running:
