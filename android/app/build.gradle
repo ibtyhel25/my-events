@@ -1,0 +1,53 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "com.google.gms.google-services" // Firebase Plugin
+    id "dev.flutter.flutter-gradle-plugin" // Flutter Plugin
+}
+
+android {
+    namespace = "com.example.untitled"
+    compileSdk = 34 // Specify the compile SDK explicitly
+
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId = "com.exemple.untitled"
+        minSdk = 23
+        targetSdk = 34
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+            // Enable shrinking, obfuscation, and optimization in release builds
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:33.7.0') // Firebase BOM for version management
+    implementation 'com.google.firebase:firebase-auth' // Firebase Authentication
+    implementation 'com.google.firebase:firebase-firestore' // Firestore Database
+}
+
+// Required by Firebase
+apply plugin: 'com.google.gms.google-services'
+
+flutter {
+    source = "../.."
+}
