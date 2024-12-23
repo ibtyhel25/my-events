@@ -54,9 +54,9 @@ This is a Flutter app for booking and managing events. Users can view events, bo
    flutter run
    ```
    
-##App Structure
+## App Structure
 
-`lib/screens`: Contains UI screens like event listing, event details, profile view, and profile edit.
-`lib/services`: Contains services for Firebase operations (authentication, event management, profile management).
-`lib/models`: Contains data models for events and profiles.
+- `lib/screens`: Contains UI screens like event listing, event details, profile view, and profile edit.
+- `lib/services`: Contains services for Firebase operations (authentication, event management, profile management).
+- `lib/models`: Contains data models for events and profiles.
    
